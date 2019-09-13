@@ -756,7 +756,7 @@ int32_t start_http_form(int32_t s, char *ip, int32_t port, unsigned char options
       else
         add_header(&ptr_head, "Content-Length", content_length, HEADER_TYPE_DEFAULT);
       if (!header_exists(&ptr_head, "Content-Type", HEADER_TYPE_DEFAULT))
-        add_header(&ptr_head, "Content-Type", "application/x-www-form-urlencoded", HEADER_TYPE_DEFAULT);
+        add_header(&ptr_head, "Content-Type", "application/json", HEADER_TYPE_DEFAULT);
       if (cookie_header != NULL)
         free(cookie_header);
       cookie_header = stringify_cookies(ptr_cookie);
@@ -818,7 +818,7 @@ int32_t start_http_form(int32_t s, char *ip, int32_t port, unsigned char options
         else
           add_header(&ptr_head, "Content-Length", content_length, HEADER_TYPE_DEFAULT);
         if (!header_exists(&ptr_head, "Content-Type", HEADER_TYPE_DEFAULT))
-          add_header(&ptr_head, "Content-Type", "application/x-www-form-urlencoded", HEADER_TYPE_DEFAULT);
+          add_header(&ptr_head, "Content-Type", "application/json", HEADER_TYPE_DEFAULT);
         if (cookie_header != NULL)
           free(cookie_header);
         cookie_header = stringify_cookies(ptr_cookie);
@@ -881,7 +881,7 @@ int32_t start_http_form(int32_t s, char *ip, int32_t port, unsigned char options
         else
           add_header(&ptr_head, "Content-Length", content_length, HEADER_TYPE_DEFAULT);
         if (!header_exists(&ptr_head, "Content-Type", HEADER_TYPE_DEFAULT))
-          add_header(&ptr_head, "Content-Type", "application/x-www-form-urlencoded", HEADER_TYPE_DEFAULT);
+          add_header(&ptr_head, "Content-Type", "application/json", HEADER_TYPE_DEFAULT);
         if (cookie_header != NULL)
           free(cookie_header);
         cookie_header = stringify_cookies(ptr_cookie);
